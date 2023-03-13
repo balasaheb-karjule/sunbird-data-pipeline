@@ -42,3 +42,4 @@
 
     - name: Installing reloader for configmaps reload
       shell: helm upgrade --install --atomic reloader ../helm_charts/bootstrap/reloader --namespace secor -f "{{ helm_file.path }}"
+      ignore_errors: yes # for now
